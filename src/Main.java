@@ -77,7 +77,7 @@ public class Main {
             novaMercadoria.setVolume(scanner.nextDouble());
             scanner.nextLine();
 
-            pedidos.add(novaMercadoria); // Adiciona a mercadoria cadastrada à lista
+            pedidos.add(novaMercadoria); // Adiciona a mercadoria cadastrada na lista
             System.out.println("--- Mercadoria '" + novaMercadoria.getNome() + "' cadastrada com sucesso! ---");
         }
 
@@ -92,9 +92,11 @@ public class Main {
         // System.out.println("Nome do destinatário: " + clienteJuridica.getNome());
         // System.out.println("Para onde deseja enviar os produtos? ");
         String enderecoEntrega = scanner.nextLine();
-        System.out.println("\nOs produtos serão enviados para o destinatário: " + "no Endereço: " + enderecoEntrega);
-    
+        System.out.println("\nOs produtos serão enviados para o destinatário: "  + " no Endereço: " + enderecoEntrega);
         
+        String remetenteEntrega = "Empresa: " + empresa.getNome() + " | CNPJ: " + empresa.getEmpCnpj();
+        System.out.println("Remetente: " + remetenteEntrega);
+
     }
     scanner.close();
     }
