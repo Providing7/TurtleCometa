@@ -36,5 +36,8 @@ public class Entrega {
     public void setDataEntrega(String dataEntrega) {
         this.dataEntrega = dataEntrega;
     }
-    
+    public String toString() {
+        return "Entrega [remetente=" + remetente + ", destinatario=" + destinatario + ", destInicial=" + destInicial
+                + ", destFinal=" + destFinal + ", dataEntrega=" + dataEntrega + "]";
+    }
 }

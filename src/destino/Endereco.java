@@ -44,6 +44,9 @@ public class Endereco {
         this.complemento = complemento;
     }
 
-
+    public String toString() {
+        return "Endereco [rua=" + rua + ", numero=" + numero + ", cep=" + cep + ", bairro=" + bairro + ", cidade="
+                + cidade + ", complemento=" + complemento + "]";
+    }
     
 }
