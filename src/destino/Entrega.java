@@ -4,7 +4,7 @@ public class Entrega {
     private String destinatario;
     private String destInicial;
     private String destFinal;
-    private String dataEntrega;
+    private String datEntrega;
     
     public String getRemetente() {
         return remetente;
@@ -31,13 +31,13 @@ public class Entrega {
         this.destFinal = destFinal;
     }
     public String getDataEntrega() {
-        return dataEntrega;
+        return datEntrega;
     }
     public void setDataEntrega(String dataEntrega) {
-        this.dataEntrega = dataEntrega;
+        this.datEntrega = dataEntrega;
     }
     public String toString() {
         return "Entrega [remetente=" + remetente + ", destinatario=" + destinatario + ", destInicial=" + destInicial
-                + ", destFinal=" + destFinal + ", dataEntrega=" + dataEntrega + "]";
+                + ", destFinal=" + destFinal + ", dataEntrega=" + datEntrega + "]";
     }
 }

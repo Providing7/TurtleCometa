@@ -1,52 +1,47 @@
 package destino;
 public class Endereco {
-    private String rua;
-    private String numero;
-    private String cep;
-    private String bairro;
-    private String cidade;
-    private String complemento;
+    private String endRua;
+    private String endNumero;
+    private String endCep;
+    private String endBairro;
+    private String endCidade;
+    private String endComplemento;
+    public String getEndRua() {
+        return endRua;
+    }
+    public void setEndRua(String endRua) {
+        this.endRua = endRua;
+    }
+    public String getEndNumero() {
+        return endNumero;
+    }
+    public void setEndNumero(String endNumero) {
+        this.endNumero = endNumero;
+    }
+    public String getEndCep() {
+        return endCep;
+    }
+    public void setEndCep(String endCep) {
+        this.endCep = endCep;
+    }
+    public String getEndBairro() {
+        return endBairro;
+    }
+    public void setEndBairro(String endBairro) {
+        this.endBairro = endBairro;
+    }
+    public String getEndCidade() {
+        return endCidade;
+    }
+    public void setEndCidade(String endCidade) {
+        this.endCidade = endCidade;
+    }
+    public String getEndComplemento() {
+        return endComplemento;
+    }
+    public void setEndComplemento(String endComplemento) {
+        this.endComplemento = endComplemento;
+    }
 
-    public String getRua() {
-        return rua;
-    }
-    public void setRua(String rua) {
-        this.rua = rua;
-    }
-    public String getNumero() {
-        return numero;
-    }
-    public void setNumero(String numero) {
-        this.numero = numero;
-    }
-    public String getCep() {
-        return cep;
-    }
-    public void setCep(String cep) {
-        this.cep = cep;
-    }
-    public String getBairro() {
-        return bairro;
-    }
-    public void setBairro(String bairro) {
-        this.bairro = bairro;
-    }
-    public String getCidade() {
-        return cidade;
-    }
-    public void setCidade(String cidade) {
-        this.cidade = cidade;
-    }
-    public String getComplemento() {
-        return complemento;
-    }
-    public void setComplemento(String complemento) {
-        this.complemento = complemento;
-    }
-
-    public String toString() {
-        return "Endereco [rua=" + rua + ", numero=" + numero + ", cep=" + cep + ", bairro=" + bairro + ", cidade="
-                + cidade + ", complemento=" + complemento + "]";
-    }
     
 }

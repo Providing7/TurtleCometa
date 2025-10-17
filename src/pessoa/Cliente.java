@@ -4,7 +4,6 @@ public class Cliente {
     private String nome;
     private String endereco;
     private String rua;
-    private String numero;
     private String cpf;
     private String cnpj;
     private String razaoSocial;
@@ -45,14 +44,9 @@ public class Cliente {
     public void setRua(String rua) {
         this.rua = rua;
     }
-    public String getNumero() {
-        return numero;
-    }
-    public void setNumero(String numero) {
-        this.numero = numero;
-    }
+
     public String toString() {
-        return "Cliente [nome=" + nome + ", endereco=" + endereco + ", rua=" + rua + ", numero=" + numero + ", cpf=" + cpf
+        return "Cliente [nome=" + nome + ", endereco=" + endereco + ", rua=" + rua + ", cpf=" + cpf
                 + ", cnpj=" + cnpj + ", razaoSocial=" + razaoSocial + "]";
     }
     

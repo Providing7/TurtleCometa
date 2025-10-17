@@ -3,6 +3,7 @@ import java.util.ArrayList;
 import gestao.Empresa;
 import pessoa.Cliente;
 import produto.Mercadoria;
+import destino.Entrega;
 
 public class Main {
     public static void main(String[] args) {
@@ -19,8 +20,6 @@ public class Main {
         String tipoCliente = scanner.nextLine();
 
         Cliente cliente = new Cliente();
-
-        // caso ele digite F será jogado para essa parte do código
         // equalIgnoreCase = caso de que o cliente digite "F" tanto maiúsculo quanto
         // minúsculo, independente entra no if
         if (tipoCliente.equalsIgnoreCase("F")) {
@@ -32,12 +31,15 @@ public class Main {
             cliente.setEndereco(scanner.nextLine());
             System.out.println("Digite o nome da sua Rua: ");
             cliente.setRua(scanner.nextLine());
+            // System.out.println("Digite o número da sua residência: ");
+            // cliente.setNumero(scanner.nextLine());
 
             System.out.println("\n--- Cliente Pessoa Física Cadastrado com Sucesso ---");
             System.out.println("Nome: " + cliente.getNome());
             System.out.println("CPF: " + cliente.getCpf());
             System.out.println("Endereço: " + cliente.getEndereco());
             System.out.println("Rua: " + cliente.getRua());
+            System.out.println("Número: " + cliente.getNumero());
 
         } else if (tipoCliente.equalsIgnoreCase("J")) {
             System.out.print("Digite a Razão Social: ");
@@ -49,10 +51,15 @@ public class Main {
             System.out.println("Digite seu endereço: ");
             cliente.setEndereco(scanner.nextLine());
 
+            System.out.println("Digite o nome da sua Rua: ");
+            cliente.setRua(scanner.nextLine());
+
             System.out.println("\n--- Cliente Pessoa Jurídica Cadastrado com Sucesso ---");
             System.out.println("Razão Social: " + cliente.getRazaoSocial());
             System.out.println("CNPJ: " + cliente.getCnpj());
             System.out.println("Endereço: " + cliente.getEndereco());
+            System.out.println("Rua: " + cliente.getRua());
+
         } else {
             System.out.println("Opção inválida. Encerrando o programa.");
             scanner.close();
@@ -101,6 +108,9 @@ public class Main {
             System.out.println("\nDigite o endereço de entrega: ");
             String enderecoEntrega = scanner.nextLine();
 
+            System.out.println("\nAté quando deseja receber?");
+            String datEntrega = scanner.nextLine();
+
             String nomeDestinatario = "";
             if (tipoCliente.equalsIgnoreCase("F")) {
                 nomeDestinatario = cliente.getNome();
@@ -108,9 +118,9 @@ public class Main {
                 nomeDestinatario = cliente.getRazaoSocial();
             }
 
-            //TESTE RÀPIDO P VER SE A TOSTRING FUNCIONA
+            System.out.println("--- Detalhes da Entrega ---");
             System.out.println("\nOs produtos serão enviados para o destinatário: " + nomeDestinatario
-                    + " no Endereço: " + enderecoEntrega + " na Rua: " + cliente.getRua());
+                    + " no Endereço: " + enderecoEntrega + " na Rua: " + cliente.getRua() + "\nData prevista para entrega: " + datEntrega);
 
             String remetenteEntrega = "Empresa: " + empresa.getNome() + " | CNPJ: " + empresa.getEmpCnpj();
             System.out.println("Remetente: " + remetenteEntrega);
@@ -121,19 +131,12 @@ public class Main {
                 System.out.println("Destino: " + destinoUsuario);
             } else if (tipoCliente.equalsIgnoreCase("F")) {
                 String destinoUsuario = "Destinatário: " + cliente.getNome() + " | CPF: " + cliente.getCpf()
-                        + " |no Endereço: " + cliente.getEndereco() + ", Rua: " + cliente.getRua();
+                        + " \n|no Endereço: " + cliente.getEndereco() + ", Rua: " + cliente.getRua();
                 System.out.println("Destino: " + destinoUsuario);
+                // System.out.println("Data prevista para entrega: 05/12/2024");
+                enderecoEntrega = cliente.getEndereco() + ", Rua: " + cliente.getRua();
             }
         } 
-        // Cliente c = new Cliente();
-        // destino.Endereco e = new destino.Endereco();
-        // c.toString();
-        // e.toString();
-
-        // Cliente c = new Cliente();
-        // Endereco e = new Endereco();
-        // c.toString();
-        // e.toString();
         scanner.close();
     }
 }
